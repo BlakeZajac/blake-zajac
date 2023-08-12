@@ -3,24 +3,16 @@
 import { twMerge } from "tailwind-merge";
 
 interface SectionProps {
-  elementType?: string;
   id?: string;
   className?: string;
   children?: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({
-  elementType,
-  id,
-  className,
-  children,
-}) => {
-  const Element = elementType || "div";
-
+const Section: React.FC<SectionProps> = ({ id, className, children }) => {
   return (
-    <Element id={id} className={twMerge("section", className)}>
+    <Section id={id} className={twMerge("section", className)}>
       {children}
-    </Element>
+    </Section>
   );
 };
 
