@@ -45,21 +45,19 @@ export function MainNav() {
       <NavigationMenuList>
         <ul className="flex gap-4 w-[200px]">
           {routes.map((route) => (
-            <>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href={route.href}
-                  className={cn(
-                    "",
-                    route.active
-                      ? "text-black dark:text-white"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {route.label}
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </>
+            <NavigationMenuItem key={route.href}>
+              <NavigationMenuLink
+                href={route.href}
+                className={cn(
+                  "",
+                  route.active
+                    ? "text-black dark:text-white"
+                    : "text-muted-foreground"
+                )}
+              >
+                {route.label}
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           ))}
         </ul>
       </NavigationMenuList>
