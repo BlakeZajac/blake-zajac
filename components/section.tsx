@@ -1,6 +1,6 @@
 "use client";
 
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 interface SectionProps {
   id?: string;
@@ -10,7 +10,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ id, className, children }) => {
   return (
-    <Section id={id} className={twMerge("section", className)}>
+    <Section id={id} className={cn("section", className)}>
       {children}
     </Section>
   );
