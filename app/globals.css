@@ -4,12 +4,73 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/public/fonts/Satoshi-Variable.ttf");
+  src: url("/fonts/Satoshi-Variable.ttf");
   font-weight: 100 900;
 }
 
 @font-face {
   font-family: "ClashDisplay";
-  src: url("/public/fonts/ClashDisplay-Variable.ttf");
+  src: url("/fonts/ClashDisplay-Variable.ttf");
   font-weight: 100 900;
+}
+
+body {
+  font-family: "Satoshi";
+}
+
+.heading-xs {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.heading-sm {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.heading-lg {
+  font-family: "ClashDisplay";
+  font-size: 2.625rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.heading-xl {
+  font-family: "ClashDisplay";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .heading-xs {
+    font-size: 1.125rem;
+  }
+
+  .heading-sm {
+    font-size: 1.25rem;
+  }
+
+  .heading-md {
+    font-size: 2rem;
+  }
+
+  .heading-lg {
+    font-size: 3.75rem;
+  }
+
+  .heading-xl {
+    font-size: 6rem;
+  }
+}
+
+.section,
+.section * {
+  position: relative;
 }

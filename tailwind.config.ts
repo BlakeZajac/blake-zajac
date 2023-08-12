@@ -32,68 +32,14 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
 
-      fontFace: {
-        "font-heading": {
-          "font-family": "ClashDisplay",
-          src: "url('/fonts/ClashDisplay-Variable.ttf')",
-        },
-
-        "font-body": {
-          "font-family": "Satoshi",
-          src: "url('/fonts/Satoshi-Variable.ttf')",
-        },
-      },
-
       fontFamily: {
         heading: ["ClashDisplay", "sans-serif"],
         body: ["Satoshi", "sans-serif"],
       },
 
-      fontSize: {
-        xs: [
-          "1.125rem",
-          {
-            fontFamily: "Satoshi",
-            lineHeight: "1.2em",
-            fontWeight: "500",
-            letterSpacing: "-0.01em",
-          },
-        ],
-
-        sm: [
-          "1.25rem",
-          {
-            fontFamily: "Satoshi",
-            lineHeight: "1.2em",
-            fontWeight: "500",
-            letterSpacing: "-0.01em",
-          },
-        ],
-
-        lg: [
-          "3.75rem",
-          {
-            fontFamily: "ClashDisplay",
-            lineHeight: "1em",
-            fontWeight: "500",
-            letterSpacing: "-0.02em",
-          },
-        ],
-
-        xl: [
-          "5.625rem",
-          {
-            fontFamily: "ClashDisplay",
-            lineHeight: "1em",
-            fontWeight: "500",
-            letterSpacing: "-0.02em",
-          },
-        ],
-      },
-
       colors: {
-        "bg-light": "#F1F1F0",
-        "bg-dark": "#0F0F0F",
+        light: "#F1F1F0",
+        dark: "#0F0F0F",
 
         black: {
           DEFAULT: "#000000",
@@ -110,7 +56,7 @@ module.exports = {
           950: "#000000",
         },
 
-        spotify: {
+        green: {
           DEFAULT: "#1ED760",
           50: "#E0FBE9",
           100: "#D5F9E2",

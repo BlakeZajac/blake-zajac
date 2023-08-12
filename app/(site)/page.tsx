@@ -1,15 +1,13 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import Hero from "@/components/section/section-hero";
+import heroImage from "../../public/img/global/headshots/blake-zajac.png";
 
 export default async function Home() {
-  const projects = await getProjects();
-
   return (
-    <div>
-      {projects.map((project) => (
-        <div key={project._id} className="bg-red-100">
-          {project.name}
-        </div>
-      ))}
-    </div>
+    <Hero
+      hasImage
+      headingBeforeText="Blake Zajac"
+      heroImage={heroImage}
+      headingAfterText="is a Newcastle-based Front End Developer and UX Designer specialising in creating distinctive and lasting website experiences."
+    />
   );
 }
