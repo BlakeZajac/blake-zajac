@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../../app/globals.css";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
@@ -15,15 +15,11 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pages = await getPages();
-
   return (
     <html lang="en">
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <MainNav />
-          {children}
-        </ThemeProvider>
+        <MainNav />
+        {children}
       </body>
     </html>
   );

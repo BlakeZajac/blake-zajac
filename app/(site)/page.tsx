@@ -6,8 +6,6 @@ export default async function Home() {
 
   return (
     <div>
-      <ModeToggle />
-
       {projects.map((project) => (
         <div key={project._id} className="bg-red-100">
           {project.name}
