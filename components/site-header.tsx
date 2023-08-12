@@ -44,11 +44,4 @@ const SiteHeader = () => {
   );
 };
 
-// Fetch projects outside the component
-export async function getProps() {
-  const projects = await getProjects();
-
-  return { projects };
-}
-
 export default SiteHeader;
