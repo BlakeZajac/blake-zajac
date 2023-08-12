@@ -41,13 +41,13 @@ export function MainNav() {
 
   return (
     <NavigationMenu>
-      <NavigationMenuList className="flex gap-8">
+      <NavigationMenuList className="flex gap-12">
         {routes.map((route) => (
           <NavigationMenuItem key={route.href}>
             <NavigationMenuLink
               href={route.href}
               className={cn(
-                "text-sm font-medium uppercase transition",
+                "text-sm font-semibold uppercase transition",
                 route.active ? "underline" : null
               )}
             >
