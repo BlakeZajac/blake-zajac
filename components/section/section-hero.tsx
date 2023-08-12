@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import Section from "@/components/section";
 import Badge from "@/components/badge";
@@ -10,7 +10,7 @@ import heroAccent from "../../public/img/global/icons/icon-accent.svg";
 import badgeImage from "../../public/img/global/icons/icon-aus.svg";
 
 interface HeroProps {
-  heroImage?: StaticImageData;
+  heroImage?: any;
   headingBeforeText?: string;
   headingAfterText?: string;
 }
