@@ -1,5 +1,5 @@
 import Hero from "@/components/section/section-hero";
-import heroImage from "../../public/img/global/headshots/blake-zajac.png";
+import heroImage from "../public/img/global/headshots/blake-zajac.png";
 
 export default async function Home() {
   return (
