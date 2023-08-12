@@ -23,7 +23,6 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <Section className="hero">
       <Container className="py-16">
-        {/* Content Wrapper */}
         <div className="pb-8">
           <h1 className="heading-xl">
             {headingBeforeText}
@@ -43,7 +42,6 @@ const Hero: React.FC<HeroProps> = ({
           </h1>
         </div>
 
-        {/* Badge Wrapper */}
         <div className="flex gap-x-4">
           <Badge dotColor="bg-green" text="Open to remote work" />
           <Badge image={badgeImage} text="Newcastle, Australia" />
