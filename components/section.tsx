@@ -9,8 +9,6 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ id, className, children }) => {
-  const Element = elementType || "div";
-
   return (
     <Section id={id} className={twMerge("section", className)}>
       {children}
