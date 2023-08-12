@@ -21,21 +21,103 @@ const project = {
     },
 
     {
-      name: "image",
-      title: "Image",
+      name: "displayOnHomePage",
+      title: "Display on the home page?",
+      type: "boolean",
+    },
+
+    {
+      name: "featuredImage",
+      title: "Featured Image",
       type: "image",
 
       options: {
         hotspot: true,
       },
 
-      fields: [{ name: "alt", title: "Alt", type: "string" }],
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
     },
 
     {
-      name: "url",
-      title: "URL",
-      type: "url",
+      name: "homePageImage",
+      title: "Home Page Image",
+      type: "image",
+
+      options: {
+        hotspot: "true",
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+
+      hidden: ({ parent }) => !parent.displayOnHomePage,
+    },
+
+    {
+      name: "stack",
+      title: "Stack",
+      type: "array",
+
+      of: [
+        {
+          type: "string",
+        },
+      ],
+
+      options: {
+        list: [
+          {
+            title: "React",
+            value: "react",
+          },
+
+          {
+            title: "Next.js",
+            value: "nextjs",
+          },
+
+          {
+            title: "Typescript",
+            value: "typescript",
+          },
+
+          {
+            title: "Tailwind CSS",
+            value: "tailwindcss",
+          },
+
+          {
+            title: "Supabase",
+            value: "supabase",
+          },
+
+          {
+            title: "Stripe",
+            value: "stripe",
+          },
+
+          {
+            title: "WordPress",
+            value: "wordpress",
+          },
+
+          {
+            title: "PHP",
+            value: "php",
+          },
+        ],
+      },
     },
 
     {
