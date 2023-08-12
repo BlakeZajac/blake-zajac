@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
-export function MainNav({ className, ...props }) {
+export function MainNav() {
   const pathname = usePathname();
 
   const routes: { href: string; label: string; active: boolean }[] = [

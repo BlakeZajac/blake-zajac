@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/theme-toggle";
 import { getProjects } from "@/sanity/sanity-utils";
 
 export default async function Home() {
