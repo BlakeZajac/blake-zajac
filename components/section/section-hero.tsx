@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import Section from "@/components/section";
 import Badge from "@/components/badge";
@@ -10,13 +10,13 @@ import heroAccent from "../../public/img/global/icons/icon-accent.svg";
 import badgeImage from "../../public/img/global/icons/icon-aus.svg";
 
 interface HeroProps {
-  heroImage?: string;
+  heroImage?: StaticImageData;
   headingBeforeText?: string;
   headingAfterText?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
-  heroImage = "",
+  heroImage,
   headingBeforeText,
   headingAfterText,
 }) => {
