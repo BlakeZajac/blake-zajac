@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
-import { MainNav } from "@/components/main-nav";
+import SiteHeader from "@/components/site-header";
 
 export const metadata: Metadata = {
   title: "Blake Zajac",
@@ -16,7 +16,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="bg-light">
-        <MainNav />
+        <SiteHeader />
         {children}
       </body>
     </html>

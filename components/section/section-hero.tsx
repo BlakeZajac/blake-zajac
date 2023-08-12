@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({
   headingAfterText,
 }) => {
   return (
-    <Section className="hero">
+    <Section className="hero h-[200vh]">
       <Container className="py-16">
         {/* Content Wrapper */}
         <div className="pb-8">

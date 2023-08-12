@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -42,24 +41,20 @@ export function MainNav() {
 
   return (
     <NavigationMenu>
-      <NavigationMenuList>
-        <ul className="flex gap-4 w-[200px]">
-          {routes.map((route) => (
-            <NavigationMenuItem key={route.href}>
-              <NavigationMenuLink
-                href={route.href}
-                className={cn(
-                  "",
-                  route.active
-                    ? "text-black dark:text-white"
-                    : "text-muted-foreground"
-                )}
-              >
-                {route.label}
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          ))}
-        </ul>
+      <NavigationMenuList className="flex gap-8">
+        {routes.map((route) => (
+          <NavigationMenuItem key={route.href}>
+            <NavigationMenuLink
+              href={route.href}
+              className={cn(
+                "text-sm font-medium uppercase transition",
+                route.active ? "underline" : null
+              )}
+            >
+              {route.label}
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
