@@ -61,7 +61,7 @@ const project = {
         },
       ],
 
-      hidden: ({ parent }) => !parent.displayOnHomePage,
+      hidden: ({ parent }: { parent: any }) => !parent.displayOnHomePage,
     },
 
     {
