@@ -8,6 +8,7 @@ export function useServices() {
   useEffect(() => {
     async function fetchServices() {
       const servicesData = await getServices();
+      // console.log("Fetched services data:", servicesData);
       setServices(servicesData);
     }
 

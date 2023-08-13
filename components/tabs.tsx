@@ -1,23 +1,43 @@
 "use client";
 
-import { Service } from "@/types/service";
+import { useEffect, useState } from "react";
+
 import Section from "@/components/section";
 import Container from "@/components/container";
 
-interface TabsProps {
-  services: Service[];
-}
+import { Service } from "@/types/service";
+import { useServices } from "@/hooks/useServices";
 
-const Tabs: React.FC<TabsProps> = ({ services }) => {
+import {
+  Tabs as RadixTabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+} from "@/components/ui/tabs";
+import { PortableText } from "@portabletext/react";
+
+const Tabs = () => {
+  const services: Service[] = useServices();
+  const defaultService = services.length > 0 ? services[0].slug : "";
+
   return (
     <Section className="tabs">
       <Container>
-        <div>
-          {services.length}
+        <RadixTabs defaultValue={defaultService}>
+          <TabsList>
+            {services.map((service) => (
+              <TabsTrigger key={service._id} value={service.slug}>
+                {service.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
           {services.map((service) => (
-            <div key={service._id}>{service.name}</div>
+            <TabsContent key={service._id} value={service.slug}>
+              <PortableText value={service.content} />
+            </TabsContent>
           ))}
-        </div>
+        </RadixTabs>
       </Container>
     </Section>
   );

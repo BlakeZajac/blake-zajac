@@ -8,14 +8,9 @@ import Section from "@/components/section";
 import { MainNav } from "@/components/main-nav";
 import ProjectMenu from "@/components/project-menu";
 
-import { Project } from "@/types/project";
-import { useProjects } from "@/hooks/useProjects";
-
 import logo from "../public/img/logo/logo-mono.svg";
 
 const SiteHeader: React.FC = () => {
-  const projects: Project[] = useProjects();
-
   return (
     <Section
       elementType="header"
@@ -29,7 +24,7 @@ const SiteHeader: React.FC = () => {
 
           <MainNav />
 
-          <ProjectMenu projects={projects} />
+          <ProjectMenu />
         </div>
       </Container>
     </Section>

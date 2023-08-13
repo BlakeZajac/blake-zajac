@@ -4,12 +4,11 @@ import { Project } from "@/types/project";
 import { MoreHorizontal, X } from "lucide-react";
 import { useState } from "react";
 import Container from "./container";
+import { useProjects } from "@/hooks/useProjects";
 
-interface ProjectMenuProps {
-  projects: Project[];
-}
+const ProjectMenu: React.FC = () => {
+  const projects: Project[] = useProjects();
 
-const ProjectMenu: React.FC<ProjectMenuProps> = ({ projects }) => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {

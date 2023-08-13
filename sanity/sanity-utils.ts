@@ -28,7 +28,7 @@ export async function getProject(slug: string): Promise<Project> {
       "slug": slug.current,
       "image": image.asset->url,
       url,
-      content
+      content,
     }`,
     { slug }
   );
@@ -65,6 +65,9 @@ export async function getServices(): Promise<Service[]> {
       _createdAt,
       name,
       "slug": slug.current,
+      displayOnHomePage,
+      badges,
+      content,
     }`
   );
 }

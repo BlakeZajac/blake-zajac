@@ -8,6 +8,7 @@ export function useProjects() {
   useEffect(() => {
     async function fetchProjects() {
       const projectsData = await getProjects();
+      // console.log("Fetched projects data:", projectsData);
       setProjects(projectsData);
     }
 

@@ -11,7 +11,7 @@ export default async function Home() {
         headingAfterText="is a Newcastle-based Front End Developer and UX Designer specialising in creating distinctive and lasting website experiences."
       />
 
-      {/* <Tabs /> */}
+      <Tabs />
     </>
   );
 }
