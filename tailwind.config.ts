@@ -34,7 +34,7 @@ module.exports = {
 
       fontFamily: {
         heading: ["ClashDisplay", "sans-serif"],
-        body: ["Satoshi", "sans-serif"],
+        body: ["SuisseIntl-Regular", "sans-serif"],
       },
 
       colors: {

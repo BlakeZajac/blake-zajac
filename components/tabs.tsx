@@ -1,12 +1,25 @@
 "use client";
 
-interface TabsProps {}
+import { Service } from "@/types/service";
+import Section from "@/components/section";
+import Container from "@/components/container";
 
-const Tabs: React.FC<TabsProps> = ({}) => {
+interface TabsProps {
+  services: Service[];
+}
+
+const Tabs: React.FC<TabsProps> = ({ services }) => {
   return (
-    <div>
-      <div>Tabs</div>
-    </div>
+    <Section className="tabs">
+      <Container>
+        <div>
+          {services.length}
+          {services.map((service) => (
+            <div key={service._id}>{service.name}</div>
+          ))}
+        </div>
+      </Container>
+    </Section>
   );
 };
 
