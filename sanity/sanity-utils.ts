@@ -3,6 +3,7 @@ import { createClient, groq } from "next-sanity";
 import { Project } from "@/types/project";
 import { Page } from "@/types/page";
 import clientConfig from "./config/client-config";
+import { Service } from "@/types/service";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
@@ -52,6 +53,32 @@ export async function GetPage(slug: string): Promise<Page> {
       title,
       "slug": slug.current,
       content
+    }`,
+    { slug }
+  );
+}
+
+export async function GetServices(): Promise<Service[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "service"] {
+      _id,
+      _createdat,
+      name,
+      "slug": slug.current,
+    }`
+  );
+}
+
+export async function GetService(slug: string): Promise<Service> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "service" && slug.current == $slug[0]] {
+      _id,
+      _createdAt,
+      name,
+      "slug": slug.current,
+      displayOnHomePage,
+      badges,
+      content,
     }`,
     { slug }
   );

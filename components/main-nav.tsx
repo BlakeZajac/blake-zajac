@@ -47,7 +47,7 @@ export function MainNav() {
             <NavigationMenuLink
               href={route.href}
               className={cn(
-                "text-sm font-semibold uppercase transition",
+                "text-sm uppercase transition",
                 route.active ? "underline" : null
               )}
             >

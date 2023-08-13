@@ -14,20 +14,24 @@
   font-weight: 100 900;
 }
 
+@font-face {
+  font-family: "SuisseIntl-Regular";
+  src: url("/fonts/SuisseIntl-Regular.ttf");
+  font-weight: normal;
+}
+
 body {
-  font-family: "Satoshi";
+  font-family: "SuisseIntl-Regular";
 }
 
 .heading-xs {
   font-size: 1rem;
-  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
 .heading-sm {
   font-size: 1.125rem;
-  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
@@ -35,7 +39,6 @@ body {
 .heading-lg {
   font-family: "ClashDisplay";
   font-size: 2.625rem;
-  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
 }
