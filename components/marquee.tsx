@@ -1,3 +1,4 @@
+import React from "react";
 import Marquee from "react-fast-marquee";
 import Section from "./section";
 import Container from "./container";
@@ -16,25 +17,19 @@ const CustomMarquee: React.FC<MarqueeProps> = ({
 }) => {
   const marqueeClasses = "overflow-hidden items-center";
   const marqueeSpeed = 50;
+  const marqueeProps = {
+    autoFill: true,
+    className: twMerge(marqueeClasses, className),
+    speed: marqueeSpeed,
+  };
 
   return (
     <Section className="marquee">
       <Container className="!w-full flex flex-col gap-2 md:gap-3 pt-12 md:pt-20">
-        <Marquee
-          autoFill
-          className={twMerge(marqueeClasses, className)}
-          speed={marqueeSpeed}
-        >
-          {children}
-        </Marquee>
+        <Marquee {...marqueeProps}>{children}</Marquee>
 
         {dupeAndReverse && (
-          <Marquee
-            autoFill
-            className={twMerge(marqueeClasses, className)}
-            direction="right"
-            speed={marqueeSpeed / 2}
-          >
+          <Marquee {...marqueeProps} direction="right" speed={marqueeSpeed / 2}>
             {children}
           </Marquee>
         )}
