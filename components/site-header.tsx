@@ -14,7 +14,7 @@ const SiteHeader: React.FC = () => {
   return (
     <Section
       elementType="header"
-      className="site-header bg-white !sticky top-0 z-10"
+      className="site-header bg-white/80 !sticky top-0 z-10 backdrop-blur-md"
     >
       <Container className="py-6">
         <div className="flex items-center justify-between">

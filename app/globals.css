@@ -33,6 +33,7 @@ body {
 .heading-lg {
   font-family: "ClashDisplay";
   font-size: 2.625rem;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -70,4 +71,8 @@ body {
 .section,
 .section * {
   position: relative;
+}
+
+p:not(:last-of-type) {
+  padding-bottom: 1rem;
 }
