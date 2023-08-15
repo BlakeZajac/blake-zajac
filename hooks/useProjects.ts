@@ -12,7 +12,7 @@ export function useProjects() {
       setProjects(projectsData);
     }
 
-    fetchProjects;
+    fetchProjects();
   }, []);
 
   return projects;
