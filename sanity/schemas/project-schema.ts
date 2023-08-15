@@ -98,6 +98,16 @@ const project = {
           },
 
           {
+            title: "Planetscale",
+            value: "planetscale",
+          },
+
+          {
+            title: "SCSS",
+            value: "scss",
+          },
+
+          {
             title: "Supabase",
             value: "supabase",
           },

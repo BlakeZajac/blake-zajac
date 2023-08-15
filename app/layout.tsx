@@ -16,20 +16,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    const lenis = new Lenis({
-      smoothWheel: true,
-      duration: 2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     smoothWheel: true,
+  //     duration: 2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //   });
 
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: any) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
-  }, []);
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   return (
     <html lang="en">
