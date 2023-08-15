@@ -32,7 +32,7 @@ body {
 
 .heading-lg {
   font-family: "ClashDisplay";
-  font-size: 2.625rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -60,7 +60,7 @@ body {
   }
 
   .heading-lg {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
 
   .heading-xl {

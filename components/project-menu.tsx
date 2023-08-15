@@ -18,7 +18,7 @@ const ProjectMenu: React.FC = () => {
   const Icon = menuVisible ? X : MoreHorizontal;
 
   return (
-    <div>
+    <>
       <Icon
         className="cursor-pointer z-20 text-black-500 hover:text-black transition"
         onClick={toggleMenu}
@@ -26,13 +26,13 @@ const ProjectMenu: React.FC = () => {
       />
 
       {menuVisible && (
-        <div className="!fixed w-full h-full left-0 top-0 bg-white z-10">
+        <div className="!fixed w-[100svw] h-[100svh] left-0 top-0 bg-white z-10">
           <Container className="py-8">
-            <div className="flex items-start gap-x-12 pb-8 uppercase text-[12px] font-medium leading-4">
-              <div className="block bg-black w-[6px] h-[6px] rounded-full top-[4px]"></div>
+            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 md:gap-12 pb-8 uppercase text-[12px] font-medium leading-4">
+              <div className="hidden sm:block bg-black w-[6px] h-[6px] rounded-full top-[4px]"></div>
 
               <div className="flex flex-col">
-                <p>({projects.length}) Recent Projects</p>
+                <p className="!pb-0">({projects.length}) Recent Projects</p>
                 <p>© Blake Zajac</p>
               </div>
 
@@ -50,7 +50,7 @@ const ProjectMenu: React.FC = () => {
           </Container>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

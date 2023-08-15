@@ -58,7 +58,7 @@ const Tabs = () => {
               className="flex-1"
             >
               <div className="md:max-w-[500px] mx-auto">
-                <div className="flex gap-x-2 pb-6">
+                <div className="flex flex-col sm:flex-row gap-2 pb-6">
                   {service.badges.map((badge, index) => (
                     <Badge key={index} text={badge} />
                   ))}
