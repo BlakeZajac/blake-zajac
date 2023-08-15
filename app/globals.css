@@ -64,7 +64,7 @@ body {
   }
 
   .heading-xl {
-    font-size: 6rem;
+    font-size: clamp(3rem, calc(4rem + 1.5vw), 6rem);
   }
 }
 

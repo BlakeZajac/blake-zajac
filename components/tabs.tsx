@@ -29,12 +29,12 @@ const Tabs = () => {
 
   return (
     <Section className="tabs">
-      <Container className="pt-20">
+      <Container className="pt-12 md:pt-20">
         <RadixTabs
           defaultValue={defaultService}
           orientation="vertical"
           data-aria-orientation="vertical"
-          className="flex flex-row"
+          className="flex flex-col md:flex-row gap-8 md:gap-16"
         >
           <TabsList className="flex flex-1 flex-col bg-transparent items-start h-fit">
             {services.map((service) => (
@@ -42,7 +42,7 @@ const Tabs = () => {
                 key={service._id}
                 value={service.slug}
                 className="
-                !shadow-none py-8 bg-transparent text-md md:text-[1.25rem] justify-start
+                !shadow-none py-4 md:py-8 bg-transparent text-md md:text-[1.25rem] justify-start
                 w-full text-grey opacity-50 hover:text-black data-[state=active]:text-black
                 data-[state=active]:opacity-100 data-[state=active]:bg-transparent border-b border-black-200"
               >
@@ -57,7 +57,7 @@ const Tabs = () => {
               value={service.slug}
               className="flex-1"
             >
-              <div className="max-w-[500px] mx-auto">
+              <div className="md:max-w-[500px] mx-auto">
                 <div className="flex gap-x-2 pb-6">
                   {service.badges.map((badge, index) => (
                     <Badge key={index} text={badge} />
