@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { useProjects } from "@/hooks/useProjects";
@@ -31,24 +31,19 @@ const ProjectMenu: React.FC = () => {
   const transitionClasses = `transition-all hover:transition-all duration-300 hover:duration-300
     ease-[cubic-bezier(0.95,0.05,0.795,0.035)]`;
 
-  const handleMouseEnter = (e: any) => {
-    const circle = e.currentTarget.querySelector(".dynamic-circle");
-    circle.style.opacity = 1;
-  };
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key == "Escape") {
+        setMenuVisible(false);
+      }
+    };
 
-  const handleMouseMove = (e: any) => {
-    const circle = e.currentTarget.querySelector(".dynamic-circle");
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    circle.style.left = `${x}px`;
-    circle.style.top = `${y}px`;
-  };
+    document.addEventListener("keydown", handleKeyDown);
 
-  const handleMouseLeave = (e: any) => {
-    const circle = e.currentTarget.querySelector(".dynamic-circle");
-    circle.style.opacity = 0;
-  };
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
@@ -56,6 +51,12 @@ const ProjectMenu: React.FC = () => {
         className="cursor-pointer z-20 text-black-500 hover:text-black transition-all"
         onClick={toggleMenu}
         size={24}
+        onKeyDown={(e) => {
+          if (e.key == "Enter") {
+            toggleMenu();
+          }
+        }}
+        tabIndex={0}
       />
 
       {menuVisible && (
@@ -95,16 +96,10 @@ const ProjectMenu: React.FC = () => {
               }}
               className="pr-20"
             >
-              <div className="dynamic-circle !absolute z-[100] w-[4rem] h-[4rem] rounded-full bg-black !text-white flex items-center justify-center">
-                Drag
-              </div>
               {projects.map((project, index) => (
                 <SwiperSlide
                   key={project._id}
                   className="flex gap-2 cursor-pointer"
-                  onMouseEnter={(e) => handleMouseEnter(e)}
-                  onMouseMove={(e) => handleMouseMove(e)}
-                  onMouseLeave={handleMouseLeave}
                 >
                   <div className="flex flex-col gap-4 items-center">
                     <div className="block h-[600px] sm:h-[700px] w-[1px] bg-black/20"></div>
