@@ -17,11 +17,13 @@ const ProjectMenu: React.FC = () => {
   };
 
   const Icon = menuVisible ? X : MoreHorizontal;
+  const transitionClasses = `transition-all hover:transition-all duration-300 hover:duration-300
+    ease-[cubic-bezier(0.95,0.05,0.795,0.035)] hover:ease-[cubic-bezier(0.95,0.05,0.795,0.035)]`;
 
   return (
     <>
       <Icon
-        className="cursor-pointer z-20 text-black-500 hover:text-black transition"
+        className="cursor-pointer z-20 text-black-500 hover:text-black transition-all"
         onClick={toggleMenu}
         size={24}
       />
@@ -43,39 +45,46 @@ const ProjectMenu: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-2">
               {projects.map((project, index) => (
-                <div key={project._id} className="flex flex-1 gap-2">
+                <div
+                  key={project._id}
+                  className="flex flex-1 gap-2 cursor-pointer"
+                >
                   <div className="flex flex-col gap-4 items-center">
-                    <div className="block h-full w-[1px] bg-black/20"></div>
+                    <div className="block h-[700px] w-[1px] bg-black/20"></div>
                     <p className="text-uppercase">0{index + 1}</p>
                   </div>
 
-                  <div className="flex flex-col gap-4 w-full h-full">
-                    {/* {project.featuredImage && ( */}
+                  <div
+                    className={`group flex flex-col gap-8 w-full h-full ${transitionClasses}`}
+                  >
                     <div className="w-full aspect-square bg-black-200 rounded-xl overflow-hidden">
-                      <Image
-                        src=""
-                        alt=""
-                        // src={project.featuredImage}
-                        // alt={project.featuredImage.alt}
-                      />
+                      <Image src="" alt="" />
                     </div>
-                    {/* )} */}
 
                     {project.name && (
-                      <div className="flex flex-col gap-2 flex-grow">
-                        <h2 className="text-uppercase !text-[1.125rem]">
-                          {project.name}
-                        </h2>
+                      <div
+                        className={`flex flex-col gap-4 px-4 py-8 rounded-xl bg-white mt-0 group-hover:mt-[-5rem] ${transitionClasses}`}
+                      >
+                        <div className="flex flex-col gap-2">
+                          <h2 className="text-uppercase !text-[1.125rem]">
+                            {project.name}
+                          </h2>
 
-                        {project.tagline && (
-                          <p className="text-uppercase">{project.tagline}</p>
+                          {project.tagline && (
+                            <p className="text-uppercase">{project.tagline}</p>
+                          )}
+                        </div>
+
+                        {project.excerpt && (
+                          <div
+                            className={`opacity-0 group-hover:opacity-100 ${transitionClasses}`}
+                          >
+                            <p className="text-black-700">{project.excerpt}</p>
+                          </div>
                         )}
                       </div>
-                    )}
-                    {project.excerpt && (
-                      <p className="text-black-700">{project.excerpt}</p>
                     )}
                   </div>
                 </div>
