@@ -4,6 +4,7 @@ import { Project } from "@/types/project";
 import { Page } from "@/types/page";
 import clientConfig from "./config/client-config";
 import { Service } from "@/types/service";
+import { Photo } from "@/types/photo";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
@@ -94,5 +95,20 @@ export async function getService(slug: string): Promise<Service> {
       content,
     }`,
     { slug }
+  );
+}
+
+export async function getPhotos(): Promise<Photo[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "photo"] {
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      excerpt,
+      featuredImage,
+      hoverImage,
+      content,
+    }`
   );
 }
