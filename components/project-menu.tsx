@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/project";
 
-import { MoreHorizontal, X } from "lucide-react";
+import { Divide, MoreHorizontal, X } from "lucide-react";
 import Container from "./container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel } from "swiper/modules";
@@ -15,6 +15,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const ProjectMenu: React.FC = () => {
   const projects: Project[] = useProjects();
@@ -105,12 +107,27 @@ const ProjectMenu: React.FC = () => {
                           )}
                         </div>
 
-                        {project.excerpt && (
+                        {project.excerpt ? (
                           <div
-                            className={`opacity-0 group-hover:opacity-100 ${transitionClasses}`}
+                            className={`opacity-0 group-hover:opacity-100 flex flex-col gap-4 items-start ${transitionClasses}`}
                           >
                             <p className="text-black-600 text-[15px]">
                               {project.excerpt}
+                            </p>
+
+                            <Link
+                              href={`/${project.slug}`}
+                              className="text-uppercase pb-1 border-b border-black"
+                            >
+                              View project
+                            </Link>
+                          </div>
+                        ) : (
+                          <div
+                            className={`opacity-0 group-hover:opacity-100 flex flex-col gap-4 items-start ${transitionClasses}`}
+                          >
+                            <p className="text-black-600 text-[15px]">
+                              Coming soon.
                             </p>
                           </div>
                         )}
