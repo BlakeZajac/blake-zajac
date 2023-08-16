@@ -76,3 +76,9 @@ body {
 p:not(:last-of-type) {
   padding-bottom: 1rem;
 }
+
+.text-uppercase {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
