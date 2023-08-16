@@ -5,7 +5,9 @@ export type Project = {
   _createdAt: Date;
   name: string;
   slug: string;
-  image: string;
-  url: string;
+  displayOnHomePage: boolean;
+  featuredImage: string;
+  homePageImage: string;
+  stack: string[];
   content: PortableTextBlock[];
 };
