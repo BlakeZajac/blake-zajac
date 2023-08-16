@@ -66,6 +66,28 @@ const photo = {
     },
 
     {
+      name: "gallery",
+      title: "Gallery",
+      type: "array",
+
+      of: [
+        {
+          type: "image",
+
+          fields: [
+            {
+              name: "alt",
+              title: "Alt",
+              type: "string",
+              description:
+                "A brief description of the image for accessibility purposes.",
+            },
+          ],
+        },
+      ],
+    },
+
+    {
       name: "content",
       title: "Content",
       type: "array",

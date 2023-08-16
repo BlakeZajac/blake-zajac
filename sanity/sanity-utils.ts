@@ -112,3 +112,19 @@ export async function getPhotos(): Promise<Photo[]> {
     }`
   );
 }
+
+export async function getPhoto(slug: string): Promise<Photo> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "photo" && slug.current == $slug[0]] {
+    _id,
+    _createdAt,
+    title,
+    "slug": slug.current,
+    excerpt,
+    featuredImage,
+    hoverImage,
+    content,
+  }`,
+    { slug }
+  );
+}

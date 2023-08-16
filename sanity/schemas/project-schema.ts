@@ -40,6 +40,8 @@ const project = {
           name: "alt",
           title: "Alt",
           type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
         },
       ],
     },
@@ -60,6 +62,8 @@ const project = {
           name: "alt",
           title: "Alt",
           type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
         },
       ],
     },
@@ -78,6 +82,8 @@ const project = {
           name: "alt",
           title: "Alt",
           type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
         },
       ],
 
