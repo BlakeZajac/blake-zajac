@@ -57,10 +57,21 @@ const ProjectMenu: React.FC = () => {
             <Swiper
               modules={[FreeMode, Mousewheel]}
               spaceBetween={8}
-              slidesPerView={3}
-              onSlideChange={() => console.log("Slide changed")}
               freeMode
               mousewheel
+              breakpoints={{
+                1124: {
+                  slidesPerView: 3,
+                },
+
+                767: {
+                  slidesPerView: 2,
+                },
+
+                479: {
+                  slidesPerView: 1,
+                },
+              }}
               className="pr-20"
             >
               {projects.map((project, index) => (
@@ -69,7 +80,7 @@ const ProjectMenu: React.FC = () => {
                   className="flex gap-2 cursor-pointer"
                 >
                   <div className="flex flex-col gap-4 items-center">
-                    <div className="block h-[700px] w-[1px] bg-black/20"></div>
+                    <div className="block h-[600px] sm:h-[700px] w-[1px] bg-black/20"></div>
                     <p className="text-uppercase">0{index + 1}</p>
                   </div>
 
