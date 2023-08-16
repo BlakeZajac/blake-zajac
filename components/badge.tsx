@@ -10,7 +10,7 @@ interface BadgeProps {
 
 const Badge: React.FC<BadgeProps> = ({ dotColor, image, text }) => {
   return (
-    <div className="flex items-center justify-center gap-2 px-[8px] py-[6px] w-full sm:w-fit bg-white border border-black-700 rounded-full overflow-hidden transition">
+    <div className="flex items-center justify-center gap-2 px-[8px] py-[6px] w-full sm:w-fit bg-white border border-black-600 rounded-full overflow-hidden transition">
       {dotColor && (
         <div className={`w-[5px] h-[5px] block rounded-full ${dotColor}`}></div>
       )}

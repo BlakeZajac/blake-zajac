@@ -1,11 +1,20 @@
 "use client";
 
-import { Project } from "@/types/project";
-import { MoreHorizontal, X } from "lucide-react";
 import { useState } from "react";
-import Container from "./container";
-import { useProjects } from "@/hooks/useProjects";
 import Image from "next/image";
+
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/project";
+
+import { MoreHorizontal, X } from "lucide-react";
+import Container from "./container";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Mousewheel } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const ProjectMenu: React.FC = () => {
   const projects: Project[] = useProjects();
@@ -16,13 +25,13 @@ const ProjectMenu: React.FC = () => {
     setMenuVisible((prevState) => !prevState);
   };
 
-  const Icon = menuVisible ? X : MoreHorizontal;
+  const ProjectMenuIcon = menuVisible ? X : MoreHorizontal;
   const transitionClasses = `transition-all hover:transition-all duration-300 hover:duration-300
-    ease-[cubic-bezier(0.95,0.05,0.795,0.035)] hover:ease-[cubic-bezier(0.95,0.05,0.795,0.035)]`;
+    ease-[cubic-bezier(0.95,0.05,0.795,0.035)]`;
 
   return (
     <>
-      <Icon
+      <ProjectMenuIcon
         className="cursor-pointer z-20 text-black-500 hover:text-black transition-all"
         onClick={toggleMenu}
         size={24}
@@ -45,11 +54,19 @@ const ProjectMenu: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex gap-x-2">
+            <Swiper
+              modules={[FreeMode, Mousewheel]}
+              spaceBetween={8}
+              slidesPerView={3}
+              onSlideChange={() => console.log("Slide changed")}
+              freeMode
+              mousewheel
+              className="pr-20"
+            >
               {projects.map((project, index) => (
-                <div
+                <SwiperSlide
                   key={project._id}
-                  className="flex flex-1 gap-2 cursor-pointer"
+                  className="flex gap-2 cursor-pointer"
                 >
                   <div className="flex flex-col gap-4 items-center">
                     <div className="block h-[700px] w-[1px] bg-black/20"></div>
@@ -57,7 +74,7 @@ const ProjectMenu: React.FC = () => {
                   </div>
 
                   <div
-                    className={`group flex flex-col gap-8 w-full h-full ${transitionClasses}`}
+                    className={`group flex flex-col gap-4 w-full h-full ${transitionClasses}`}
                   >
                     <div className="w-full aspect-square bg-black-200 rounded-xl overflow-hidden">
                       <Image src="" alt="" />
@@ -81,15 +98,17 @@ const ProjectMenu: React.FC = () => {
                           <div
                             className={`opacity-0 group-hover:opacity-100 ${transitionClasses}`}
                           >
-                            <p className="text-black-700">{project.excerpt}</p>
+                            <p className="text-black-600 text-[15px]">
+                              {project.excerpt}
+                            </p>
                           </div>
                         )}
                       </div>
                     )}
                   </div>
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </Container>
         </div>
       )}
