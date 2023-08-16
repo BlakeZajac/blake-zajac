@@ -42,9 +42,12 @@ const ProjectMenu: React.FC = () => {
               </p>
             </div>
 
-            <div>
+            <div className="flex gap-x-4">
               {projects.map((project) => (
-                <div key={project._id}>{project.name}</div>
+                <div key={project._id} className="flex-1">
+                  <div>{project.name && <h2>{project.name}</h2>}</div>
+                  {project.excerpt && <p>{project.excerpt}</p>}
+                </div>
               ))}
             </div>
           </Container>

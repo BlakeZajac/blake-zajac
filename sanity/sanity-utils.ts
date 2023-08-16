@@ -12,8 +12,13 @@ export async function getProjects(): Promise<Project[]> {
       _createdAt,
       name,
       "slug": slug.current,
-      "image": image.asset->url,
-      url,
+      displayOnHomePage,
+      "featuredImage": featuredImage.asset->url,
+      "homePageImage": homePageImage.asset->url,
+      "hoverImage": hoverImage.asset->url,
+      stack,
+      tagline,
+      excerpt,
       content
     }`
   );
@@ -26,8 +31,13 @@ export async function getProject(slug: string): Promise<Project> {
       _createdAt,
       name,
       "slug": slug.current,
-      "image": image.asset->url,
-      url,
+      displayOnHomePage,
+      "featuredImage": featuredImage.asset->url,
+      "homePageImage": homePageImage.asset->url,
+      "hoverImage": hoverImage.asset->url,
+      stack,
+      tagline,
+      excerpt,
       content,
     }`,
     { slug }

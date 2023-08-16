@@ -61,6 +61,14 @@ const blog = {
       options: {
         hotspot: true,
       },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
     },
 
     {
@@ -73,6 +81,14 @@ const blog = {
       options: {
         hotspot: true,
       },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
     },
 
     {

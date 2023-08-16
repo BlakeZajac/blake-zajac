@@ -8,6 +8,9 @@ export type Project = {
   displayOnHomePage: boolean;
   featuredImage: string;
   homePageImage: string;
+  hoverImage: string;
   stack: string[];
+  tagline: string;
+  excerpt: string;
   content: PortableTextBlock[];
 };

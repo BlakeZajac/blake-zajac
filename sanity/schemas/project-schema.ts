@@ -45,6 +45,26 @@ const project = {
     },
 
     {
+      name: "hoverImage",
+      title: "Hover Image",
+      type: "image",
+      description:
+        "Upload an image here which will be shown when a user hovers on the article.",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    },
+
+    {
       name: "homePageImage",
       title: "Home Page Image",
       type: "image",
@@ -128,6 +148,18 @@ const project = {
           },
         ],
       },
+    },
+
+    {
+      name: "tagline",
+      title: "Tagline",
+      type: "string",
+    },
+
+    {
+      name: "excerpt",
+      title: "Excerpt",
+      type: "string",
     },
 
     {
