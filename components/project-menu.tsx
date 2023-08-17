@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/project";
 
-import { Divide, MoreHorizontal, X } from "lucide-react";
+import { MoreHorizontal, X } from "lucide-react";
 import Container from "./container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel } from "swiper/modules";
