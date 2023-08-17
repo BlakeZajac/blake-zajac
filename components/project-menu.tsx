@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/project";
@@ -15,8 +16,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Button } from "./ui/button";
-import Link from "next/link";
 
 const ProjectMenu: React.FC = () => {
   const projects: Project[] = useProjects();
@@ -32,7 +31,7 @@ const ProjectMenu: React.FC = () => {
     ease-[cubic-bezier(0.95,0.05,0.795,0.035)]`;
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: any) => {
       if (e.key == "Escape") {
         setMenuVisible(false);
       }
