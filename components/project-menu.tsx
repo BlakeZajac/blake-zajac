@@ -31,7 +31,7 @@ const ProjectMenu: React.FC = () => {
     ease-[cubic-bezier(0.95,0.05,0.795,0.035)]`;
 
   useEffect(() => {
-    const handleKeyDown = (e: any) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key == "Escape") {
         setMenuVisible(false);
       }
