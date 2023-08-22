@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/common/container";
+import Container from "@/components/common/Container";
 import Section from "@/components/section";
 
 interface ProjectsPageProps {}

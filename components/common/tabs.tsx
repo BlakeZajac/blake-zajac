@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import Section from "@/components/common/section";
-import Container from "@/components/common/container";
+import Section from "@/components/common/Section";
+import Container from "@/components/common/Container";
 
 import { Service } from "@/types/service";
 import { useServices } from "@/app/hooks/useServices";
@@ -15,7 +15,7 @@ import {
   TabsContent,
 } from "@/components/ui/tabs";
 import { PortableText } from "@portabletext/react";
-import Badge from "./badge";
+import Badge from "./Badge";
 
 const Tabs = () => {
   const services: Service[] = useServices();

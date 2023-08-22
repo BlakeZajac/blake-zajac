@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-import Section from "@/components/common/section";
-import Badge from "@/components/common/badge";
-import Container from "./container";
+import Section from "@/components/common/Section";
+import Badge from "@/components/common/Badge";
+import Container from "./Container";
 
 import heroAccent from "../../public/img/global/icons/icon-accent.svg";
 import badgeImage from "../../public/img/global/icons/icon-aus.svg";

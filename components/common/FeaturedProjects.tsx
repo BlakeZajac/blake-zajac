@@ -1,7 +1,7 @@
 "use client";
 
-import Section from "@/components/common/section";
-import Container from "@/components/common/container";
+import Section from "@/components/common/Section";
+import Container from "@/components/common/Container";
 
 import { useProjects } from "@/app/hooks/useProjects";
 import { Project } from "@/types/project";

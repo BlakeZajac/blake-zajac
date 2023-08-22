@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Container from "@/components/common/container";
-import Section from "@/components/common/section";
-import { MainNav } from "@/components/navbar/main-nav";
-import ProjectMenu from "@/components/navbar/project-menu";
+import Section from "@/components/common/Section";
+import Container from "@/components/common/Container";
+import { MainNav } from "@/components/navbar/MainNav";
+import ProjectMenu from "@/components/navbar/ProjectMenu";
 
 import logo from "../../public/img/logo/logo-mono.svg";
 

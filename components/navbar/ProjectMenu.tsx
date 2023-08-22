@@ -8,7 +8,7 @@ import { useProjects } from "@/app/hooks/useProjects";
 import { Project } from "@/types/project";
 
 import { MoreHorizontal, X } from "lucide-react";
-import Container from "@/components/common/container";
+import Container from "@/components/common/Container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel } from "swiper/modules";
 

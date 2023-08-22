@@ -1,8 +1,8 @@
-import Hero from "@/components/common/hero";
+import Hero from "@/components/common/Hero";
 import heroImage from "../public/img/global/headshots/blake-zajac.png";
-import Tabs from "@/components/common/tabs";
-import CustomMarquee from "@/components/common/marquee";
-import FeaturedProjects from "@/components/common/featured-projects";
+import Tabs from "@/components/common/Tabs";
+import CustomMarquee from "@/components/common/Marquee";
+import FeaturedProjects from "@/components/common/FeaturedProjects";
 
 export default async function Home() {
   return (

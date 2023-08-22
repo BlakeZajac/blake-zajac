@@ -1,7 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import Section from "./section";
-import Container from "./container";
+import Section from "./Section";
+import Container from "./Container";
 import { twMerge } from "tailwind-merge";
 
 interface MarqueeProps {
