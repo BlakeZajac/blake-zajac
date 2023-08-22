@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useProjects } from "@/hooks/useProjects";
+import { useProjects } from "@/app/hooks/useProjects";
 import { Project } from "@/types/project";
 
 import { MoreHorizontal, X } from "lucide-react";
-import Container from "./container";
+import Container from "@/components/common/container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-4;
+
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useRouter } from "next/navigation";

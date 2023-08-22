@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 
-import Section from "@/components/section";
-import Badge from "@/components/badge";
+import Section from "@/components/common/section";
+import Badge from "@/components/common/badge";
 import Container from "./container";
 
-import heroAccent from ".././public/img/global/icons/icon-accent.svg";
-import badgeImage from ".././public/img/global/icons/icon-aus.svg";
+import heroAccent from "../../public/img/global/icons/icon-accent.svg";
+import badgeImage from "../../public/img/global/icons/icon-aus.svg";
 
 interface HeroProps {
   heroImage?: any;

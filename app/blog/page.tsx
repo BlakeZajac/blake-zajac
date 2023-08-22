@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "@/components/container";
+import Container from "@/components/common/container";
 import Section from "@/components/section";
 
 interface BlogPageProps {}

@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 
-import Section from "@/components/section";
-import Container from "@/components/container";
+import Section from "@/components/common/section";
+import Container from "@/components/common/container";
 
 import { Service } from "@/types/service";
-import { useServices } from "@/hooks/useServices";
+import { useServices } from "@/app/hooks/useServices";
 
 import {
   Tabs as RadixTabs,

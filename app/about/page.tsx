@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "@/components/container";
-import Section from "@/components/section";
+import Container from "@/components/common/container";
+import Section from "@/components/common/section";
 
 interface AboutPageProps {}
 
