@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <Section className="hero">
-      <Container className="pt-12 md:pt-20">
+      <Container spacingLg>
         <div className="pb-8">
           <h1 className="heading-xl">
             <span className="mr-2 sm:m-0">{headingBeforeText}</span>

@@ -29,9 +29,13 @@ const Tabs = () => {
 
   return (
     <Section className="tabs">
-      <Container className="pt-12 md:pt-20">
+      <Container spacingLg>
+        <div className="pb-8">
+          <p className="text-uppercase">What I do</p>
+        </div>
+
         <RadixTabs
-          defaultValue={defaultService}
+          defaultValue="user-research"
           orientation="vertical"
           data-aria-orientation="vertical"
           className="flex flex-col md:flex-row gap-8 md:gap-16"
@@ -42,9 +46,9 @@ const Tabs = () => {
                 key={service._id}
                 value={service.slug}
                 className="
-                !shadow-none py-4 md:py-8 bg-transparent text-md md:text-[1.25rem] justify-start
+                !shadow-none px-0 py-4 bg-transparent text-3xl justify-start
                 w-full text-grey opacity-50 hover:text-black data-[state=active]:text-black
-                data-[state=active]:opacity-100 data-[state=active]:bg-transparent border-b border-black-200"
+                data-[state=active]:opacity-100 data-[state=active]:bg-transparent"
               >
                 {service.name}
               </TabsTrigger>

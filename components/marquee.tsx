@@ -25,7 +25,7 @@ const CustomMarquee: React.FC<MarqueeProps> = ({
 
   return (
     <Section className="marquee">
-      <Container className="!w-full flex flex-col gap-2 md:gap-3 pt-12 md:pt-20">
+      <Container spacingLg className="!w-full flex flex-col gap-2 md:gap-3">
         <Marquee {...marqueeProps}>{children}</Marquee>
 
         {dupeAndReverse && (

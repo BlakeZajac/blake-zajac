@@ -14,10 +14,13 @@ import { FreeMode, Mousewheel } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+4;
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useRouter } from "next/navigation";
 
 const ProjectMenu: React.FC = () => {
+  const router = useRouter();
   const projects: Project[] = useProjects();
 
   const [menuVisible, setMenuVisible] = useState(false);
@@ -99,6 +102,7 @@ const ProjectMenu: React.FC = () => {
                 <SwiperSlide
                   key={project._id}
                   className="flex gap-2 cursor-pointer"
+                  onClick={() => router.push(`/${project.slug}`)}
                 >
                   <div className="flex flex-col gap-4 items-center">
                     <div className="block h-[600px] sm:h-[700px] w-[1px] bg-black/20"></div>
@@ -133,13 +137,6 @@ const ProjectMenu: React.FC = () => {
                             <p className="text-black-600 text-[15px]">
                               {project.excerpt}
                             </p>
-
-                            <Link
-                              href={`/${project.slug}`}
-                              className="text-uppercase pb-1 border-b border-black"
-                            >
-                              View project
-                            </Link>
                           </div>
                         ) : (
                           <div
