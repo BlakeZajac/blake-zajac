@@ -179,7 +179,7 @@ const project = {
     },
 
     {
-      name: "respositoryLink",
+      name: "repositoryLink",
       title: "Repository link",
       type: "url",
     },

@@ -12,5 +12,7 @@ export type Project = {
   stack: string[];
   tagline: string;
   excerpt: string;
+  repositoryLink: string;
+  demoLink: string;
   content: PortableTextBlock[];
 };
