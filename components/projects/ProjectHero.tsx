@@ -23,7 +23,7 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
             {/* Title */}
             <h1 className="heading-2xl">{title}</h1>
 
-            <div className="flex">
+            <div className="md:flex">
               {/* Stack */}
               <div className="md:w-3/5"></div>
 

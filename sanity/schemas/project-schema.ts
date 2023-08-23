@@ -105,62 +105,62 @@ const project = {
         list: [
           {
             title: "React",
-            value: "react",
+            value: "React",
           },
 
           {
             title: "Next.js",
-            value: "nextjs",
+            value: "Next.js",
           },
 
           {
             title: "Typescript",
-            value: "typescript",
+            value: "TypeScript",
           },
 
           {
             title: "Tailwind CSS",
-            value: "tailwindcss",
+            value: "Tailwind CSS",
           },
 
           {
             title: "Prisma",
-            value: "prisma",
+            value: "Prisma",
           },
 
           {
             title: "MongoDB",
-            value: "mongodb",
+            value: "MongoDB",
           },
 
           {
             title: "Planetscale",
-            value: "planetscale",
+            value: "Planetscale",
           },
 
           {
             title: "SCSS",
-            value: "scss",
+            value: "SCSS",
           },
 
           {
             title: "Supabase",
-            value: "supabase",
+            value: "Supabase",
           },
 
           {
             title: "Stripe",
-            value: "stripe",
+            value: "Stripe",
           },
 
           {
             title: "WordPress",
-            value: "wordpress",
+            value: "WordPress",
           },
 
           {
             title: "PHP",
-            value: "php",
+            value: "PHP",
           },
         ],
       },
