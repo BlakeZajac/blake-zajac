@@ -2,6 +2,7 @@ import { getProject } from "@/sanity/sanity-utils";
 
 import ProjectHero from "@/components/projects/ProjectHero";
 import ProjectContent from "@/components/projects/ProjectContent";
+import ProjectImages from "@/components/projects/ProjectImages";
 
 type Props = {
   params: {
@@ -22,6 +23,12 @@ export default async function Project({ params }: Props) {
       />
 
       <ProjectContent projectContent={project.content} stack={project.stack} />
+
+      <ProjectImages
+        imageOrientation="portrait"
+        imageOne={project.mockupImageOne}
+        imageTwo={project.mockupImageTwo}
+      />
     </>
   );
 }

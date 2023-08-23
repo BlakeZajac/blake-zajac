@@ -19,7 +19,12 @@ const SiteHeader = () => {
       <Container className="py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="w-fit h-fit">
-            <Image src={logo} alt="Logo" className="w-auto h-[32px]" />
+            <Image
+              src={logo}
+              alt="Logo"
+              className="w-auto h-[32px]"
+              loading="lazy"
+            />
           </Link>
 
           <MainNav />

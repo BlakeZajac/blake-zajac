@@ -28,7 +28,7 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
             {/* Title */}
             <h1 className="heading-2xl">{title}</h1>
 
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-2/5"></div>
 
               {/* Excerpt */}

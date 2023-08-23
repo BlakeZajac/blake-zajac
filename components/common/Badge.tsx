@@ -20,6 +20,7 @@ const Badge: React.FC<BadgeProps> = ({ dotColor, image, text }) => {
           src={image}
           alt=""
           className="w-4 h-4 object-cover rounded-full"
+          loading="lazy"
         />
       )}
 

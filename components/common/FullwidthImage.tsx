@@ -26,6 +26,7 @@ const FullwidthImage: React.FC<FullwidthImageProps> = ({
         objectFit="cover"
         fill
         className={`${relative ? "!relative" : ""}`}
+        loading="lazy"
       />
     </div>
   );

@@ -11,7 +11,7 @@ const ProjectStackItem: React.FC<ProjectStackItemProps> = ({ icon, title }) => {
   return (
     <div className="flex gap-3">
       <div className="w-6 h-6">
-        <Image src={icon} alt="Icon" />
+        <Image src={icon} alt="Icon" loading="lazy" />
         <p className="text-black-600">{title}</p>
       </div>
     </div>

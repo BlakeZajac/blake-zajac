@@ -33,12 +33,14 @@ const Hero: React.FC<HeroProps> = ({
                     src={heroImage}
                     alt="Headshot"
                     className="hidden sm:block mx-2 md:mx-4 w-[64px] md:w-[100px] h-[64px] md:h-[100px] border border-black rounded-full"
+                    loading="lazy"
                   />
 
                   <Image
                     src={heroAccent}
                     alt=""
                     className="!absolute hidden sm:block top-[-1rem] md:top-[-1.5rem] left-[-1rem] md:left-0 h-[1.5rem] md:h-[2rem]"
+                    loading="lazy"
                   />
                 </>
               )}
