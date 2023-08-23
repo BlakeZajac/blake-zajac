@@ -18,7 +18,7 @@ export default async function Project({ params }: Props) {
   return (
     <>
       <ProjectHero
-        imageSrc="a"
+        imageSrc={project.featuredImage}
         title={project.name}
         excerpt={project.excerpt}
       />
