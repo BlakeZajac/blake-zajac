@@ -19,13 +19,13 @@ const FullwidthImage: React.FC<FullwidthImageProps> = ({
   relative,
 }) => {
   return (
-    <div className={`${spacingTop ? spacingTopValue : null}`}>
+    <div className={`${spacingTop ? spacingTopValue : ""}`}>
       <Image
         src={imageSrc}
         alt={imageAlt}
         objectFit="cover"
         fill
-        className={`${relative ? "!relative" : null}`}
+        className={`${relative ? "!relative" : ""}`}
       />
     </div>
   );

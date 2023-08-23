@@ -54,7 +54,7 @@ export function MainNav() {
               href={route.href}
               className={cn(
                 "text-sm uppercase py-1",
-                route.active ? "border-b border-black" : null
+                route.active ? "border-b border-black" : ""
               )}
             >
               {route.label}
