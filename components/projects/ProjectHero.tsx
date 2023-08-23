@@ -2,7 +2,7 @@
 
 import Section from "@/components/common/Section";
 import Container from "@/components/common/Container";
-import { Button } from "../ui/button";
+import Button from "@/components/common/Button";
 
 interface ProjectHeroProps {
   imageSrc: string;

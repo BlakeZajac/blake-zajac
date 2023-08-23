@@ -26,7 +26,7 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({
         className={`flex gap-8 ${
           imageOrientation === "landscape"
             ? "flex-col"
-            : "lg:flex-row items-start lg:mt-24"
+            : "lg:flex-row items-start lg:mt-32"
         }`}
       >
         {imageOne && (
@@ -34,14 +34,14 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({
             className={`${
               imageOrientation === "landscape"
                 ? "w-full lg:w-5/6"
-                : "w-full lg:w-2/5 lg:-mt-24"
+                : "w-full lg:w-2/5 lg:-mt-32"
             }`}
           >
             <Image
               src={imageOne}
               alt={imageOneAlt}
               fill
-              className="!relative object-cover"
+              className="!relative object-cover w-full"
               loading="lazy"
             />
           </div>
@@ -59,7 +59,7 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({
               src={imageTwo}
               alt={imageTwoAlt}
               fill
-              className="!relative object-cover"
+              className="!relative object-cover w-full"
               loading="lazy"
             />
           </div>

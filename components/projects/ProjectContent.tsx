@@ -5,12 +5,12 @@ import { PortableTextBlock } from "sanity";
 
 interface ProjectContentProps {
   projectContent: PortableTextBlock[];
-  stack: string[];
+  stack?: string[];
 }
 
 const ProjectContent: React.FC<ProjectContentProps> = ({
   projectContent,
-  stack,
+  stack = [],
 }) => {
   return (
     <Section className="project-content">
