@@ -37,6 +37,12 @@ export function MainNav() {
       label: "Photo",
       active: pathname === "/photo",
     },
+
+    {
+      href: "/contact",
+      label: "Contact",
+      active: pathname === "/contact",
+    },
   ];
 
   return (
