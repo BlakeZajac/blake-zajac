@@ -54,7 +54,7 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({
             ${
               imageOrientation === "landscape"
                 ? "w-full lg:w-11/12 ml-auto"
-                : "w-fill lg:3/5"
+                : "w-full lg:w-3/5"
             }`}
           >
             <Image

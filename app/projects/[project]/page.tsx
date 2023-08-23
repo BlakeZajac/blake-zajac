@@ -39,7 +39,7 @@ export default async function Project({ params }: Props) {
       )}
 
       {project.headingWithTextOne && (
-        <ProjectContent content={project.headingWithTextOne} />
+        <ProjectContent emptyDiv content={project.headingWithTextOne} />
       )}
 
       {project.mockupImageThree || project.mockupImageFour ? (
@@ -51,7 +51,7 @@ export default async function Project({ params }: Props) {
       ) : null}
 
       {project.headingWithTextTwo && (
-        <ProjectContent content={project.headingWithTextTwo} />
+        <ProjectContent emptyDiv content={project.headingWithTextTwo} />
       )}
 
       {project.mockupImageFive || project.mockupImageSix ? (

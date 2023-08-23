@@ -7,12 +7,14 @@ interface ProjectContentProps {
   content: PortableTextBlock[];
   stack?: string[];
   customHeading?: boolean;
+  emptyDiv?: boolean;
 }
 
 const ProjectContent: React.FC<ProjectContentProps> = ({
   content,
   stack = [],
   customHeading,
+  emptyDiv,
 }) => {
   return (
     <Section className="project-content">
@@ -20,7 +22,11 @@ const ProjectContent: React.FC<ProjectContentProps> = ({
         spacingXl
         className="flex flex-col md:flex-row gap-20 md:gap-8"
       >
-        <div className="flex flex-col gap-6 md:w-2/5 text-black-600">
+        <div
+          className={`flex flex-col gap-6 md:w-2/5 text-black-600 ${
+            emptyDiv ? "hidden lg:flex" : ""
+          }`}
+        >
           {customHeading && <p className="text-uppercase text-black">Stack</p>}
 
           <ul className="flex flex-col gap-1">
