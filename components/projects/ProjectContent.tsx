@@ -13,7 +13,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({
   stack,
 }) => {
   return (
-    <Section>
+    <Section className="project-content">
       <Container
         spacingXl
         className="flex flex-col md:flex-row gap-20 md:gap-8"

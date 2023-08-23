@@ -22,7 +22,7 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
   return (
     <>
       {/* Content Container */}
-      <Section className="bg-black-900">
+      <Section className="project-hero bg-black-900">
         <Container spacingXl className="pb-20 md:pb-28">
           <div className="flex flex-col gap-8 md:gap-12 text-black-100">
             {/* Title */}
@@ -54,7 +54,7 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
         </Container>
       </Section>
 
-      <Section>
+      <Section className="project-hero-image">
         {/* Image Container */}
         {imageSrc && (
           <div

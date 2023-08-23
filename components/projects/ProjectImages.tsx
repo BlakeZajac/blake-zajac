@@ -13,39 +13,53 @@ interface ProjectImagesProps {
 }
 
 const ProjectImages: React.FC<ProjectImagesProps> = ({
-  imageOrientation = "landscape",
+  imageOrientation = "",
   imageOne,
   imageOneAlt = "",
   imageTwo,
   imageTwoAlt = "",
 }) => {
   return (
-    <Section>
+    <Section className="project-images">
       <Container
-        spacingXl
-        className={`flex ${
-          imageOrientation === "landscape" ? "flex-col" : "flex-row"
+        spacing2xl
+        className={`flex gap-8 ${
+          imageOrientation === "landscape"
+            ? "flex-col"
+            : "lg:flex-row items-start lg:mt-24"
         }`}
       >
         {imageOne && (
-          <div className="md:w-2/5">
+          <div
+            className={`${
+              imageOrientation === "landscape"
+                ? "w-full lg:w-5/6"
+                : "w-full lg:w-2/5 lg:-mt-24"
+            }`}
+          >
             <Image
               src={imageOne}
               alt={imageOneAlt}
               fill
-              className="!relative"
+              className="!relative object-cover"
               loading="lazy"
             />
           </div>
         )}
 
         {imageTwo && (
-          <div className="md:w-3/5">
+          <div
+            className={`${
+              imageOrientation === "landscape"
+                ? "w-full lg:w-5/6 ml-auto"
+                : "w-fill lg:3/5"
+            }`}
+          >
             <Image
               src={imageTwo}
               alt={imageTwoAlt}
               fill
-              className="!relative"
+              className="!relative object-cover"
               loading="lazy"
             />
           </div>
