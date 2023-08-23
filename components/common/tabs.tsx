@@ -46,7 +46,7 @@ const Tabs = () => {
                 key={service._id}
                 value={service.slug}
                 className="
-                !shadow-none px-0 py-4 bg-transparent text-3xl justify-start
+                !shadow-none px-0 py-4 bg-transparent text-4xl justify-start
                 w-full text-grey opacity-50 hover:text-black data-[state=active]:text-black
                 data-[state=active]:opacity-100 data-[state=active]:bg-transparent"
               >
