@@ -13,7 +13,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsInterface> = () => {
 
   return (
     <Section>
-      <Container>
+      <Container spacingLg>
         Featured Projects
         {projects.map((project) => (
           <div key={project._id}>{project.name}</div>

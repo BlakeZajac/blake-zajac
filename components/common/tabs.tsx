@@ -30,7 +30,7 @@ const Tabs = () => {
   return (
     <Section className="tabs">
       <Container spacingLg>
-        <div className="pb-8">
+        <div className="pb-4 md:pb-8">
           <p className="text-uppercase">What I do</p>
         </div>
 
@@ -40,13 +40,13 @@ const Tabs = () => {
           data-aria-orientation="vertical"
           className="flex flex-col md:flex-row gap-8 md:gap-16"
         >
-          <TabsList className="flex flex-1 flex-col bg-transparent items-start h-fit">
+          <TabsList className="flex flex-1 flex-col bg-transparent items-start h-fit p-0">
             {services.map((service) => (
               <TabsTrigger
                 key={service._id}
                 value={service.slug}
                 className="
-                !shadow-none px-0 py-4 bg-transparent text-4xl justify-start
+                !shadow-none px-0 py:2 md:py-4 bg-transparent text-2xl md:text-4xl justify-start
                 w-full text-grey opacity-50 hover:text-black data-[state=active]:text-black
                 data-[state=active]:opacity-100 data-[state=active]:bg-transparent"
               >
