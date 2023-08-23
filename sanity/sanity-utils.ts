@@ -22,7 +22,15 @@ export async function getProjects(): Promise<Project[]> {
       excerpt,
       repositoryLink,
       demoLink,
-      content
+      content,
+      "mockupImageOne": mockupImageOne.asset->url,
+      "mockupImageTwo": mockupImageTwo.asset->url,
+      headingWithTextOne,
+      "mockupImageThree": mockupImageThree.asset->url,
+      "mockupImageFour": mockupImageOnFour.asset->url,
+      headingWithTextTwo,
+      "mockupImageFive": mockupImageOneFive.asset->url,
+      "mockupImageSix": mockupImageOne.Six.asset->url,
     }`
   );
 }
@@ -44,6 +52,14 @@ export async function getProject(slug: string): Promise<Project> {
       repositoryLink,
       demoLink,
       content,
+      "mockupImageOne": mockupImageOne.asset->url,
+      "mockupImageTwo": mockupImageTwo.asset->url,
+      headingWithTextOne,
+      "mockupImageThree": mockupImageThree.asset->url,
+      "mockupImageFour": mockupImageOnFour.asset->url,
+      headingWithTextTwo,
+      "mockupImageFive": mockupImageOneFive.asset->url,
+      "mockupImageSix": mockupImageOne.Six.asset->url,
     }`,
     { slug }
   );

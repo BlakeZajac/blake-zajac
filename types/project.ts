@@ -15,4 +15,12 @@ export type Project = {
   repositoryLink: string;
   demoLink: string;
   content: PortableTextBlock[];
+  mockupImageOne: string;
+  mockupImageTwo: string;
+  headingWithTextOne: PortableTextBlock[];
+  mockupImageThree: string;
+  mockupImageFour: string;
+  headingWithTextTwo: PortableTextBlock[];
+  mockupImageFive: string;
+  mockupImageSix: string;
 };

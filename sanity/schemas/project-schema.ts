@@ -200,6 +200,148 @@ const project = {
         },
       ],
     },
+
+    {
+      name: "mockupImageOne",
+      title: "Mockup Image #1",
+      type: "image",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
+        },
+      ],
+    },
+
+    {
+      name: "mockupImageTwo",
+      title: "Mockup Image #2",
+      type: "image",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
+        },
+      ],
+    },
+
+    {
+      name: "headingWithTextOne",
+      title: "Heading With Text #1",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+
+    {
+      name: "mockupImageThree",
+      title: "Mockup Image #3",
+      type: "image",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
+        },
+      ],
+    },
+
+    {
+      name: "mockupImageFour",
+      title: "Mockup Image #4",
+      type: "image",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
+        },
+      ],
+    },
+
+    {
+      name: "headingWithTextTwo",
+      title: "Heading With Text #2",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+
+    {
+      name: "mockupImageFive",
+      title: "Mockup Image #5",
+      type: "image",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
+        },
+      ],
+    },
+
+    {
+      name: "mockupImageSix",
+      title: "Mockup Image #6",
+      type: "image",
+
+      options: {
+        hotspot: true,
+      },
+
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+          description:
+            "A brief description of the image for accessibility purposes.",
+        },
+      ],
+    },
   ],
 };
 
