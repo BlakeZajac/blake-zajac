@@ -3,7 +3,7 @@
 import Section from "@/components/common/Section";
 import Container from "@/components/common/Container";
 
-import { useProjects } from "@/app/hooks/useProjects";
+import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/project";
 
 interface FeaturedProjectsInterface {}

@@ -124,6 +124,16 @@ const project = {
           },
 
           {
+            title: "Prisma",
+            value: "prisma",
+          },
+
+          {
+            title: "MongoDB",
+            value: "mongodb",
+          },
+
+          {
             title: "Planetscale",
             value: "planetscale",
           },
@@ -166,6 +176,18 @@ const project = {
       name: "excerpt",
       title: "Excerpt",
       type: "string",
+    },
+
+    {
+      name: "respositoryLink",
+      title: "Repository link",
+      type: "url",
+    },
+
+    {
+      name: "demoLink",
+      title: "Demo Link",
+      type: "url",
     },
 
     {

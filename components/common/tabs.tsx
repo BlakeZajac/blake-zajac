@@ -6,7 +6,7 @@ import Section from "@/components/common/Section";
 import Container from "@/components/common/Container";
 
 import { Service } from "@/types/service";
-import { useServices } from "@/app/hooks/useServices";
+import { useServices } from "@/hooks/useServices";
 
 import {
   Tabs as RadixTabs,

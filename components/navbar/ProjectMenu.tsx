@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useProjects } from "@/app/hooks/useProjects";
+import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/project";
 
 import { MoreHorizontal, X } from "lucide-react";
@@ -102,7 +102,7 @@ const ProjectMenu: React.FC = () => {
                 <SwiperSlide
                   key={project._id}
                   className="flex gap-2 cursor-pointer"
-                  onClick={() => router.push(`/${project.slug}`)}
+                  onClick={() => router.push(`/projects/${project.slug}`)}
                 >
                   <div className="flex flex-col gap-4 items-center">
                     <div className="block h-[600px] sm:h-[700px] w-[1px] bg-black/20"></div>
