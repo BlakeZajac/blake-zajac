@@ -18,19 +18,19 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
     <>
       {/* Content Container */}
       <Section className="bg-black-900">
-        <Container spacingLg className="pb-16 md:pb-24">
-          <div className="flex flex-col gap-12 text-black-100">
+        <Container spacingXl className="pb-20 md:pb-28">
+          <div className="flex flex-col gap-8 md:gap-12 text-black-100">
             {/* Title */}
             <h1 className="heading-2xl">{title}</h1>
 
             <div className="flex">
               {/* Stack */}
-              <div className="md:w-1/2"></div>
+              <div className="md:w-3/5"></div>
 
               {/* Excerpt */}
-              <div className="md:w-1/2">
+              <div className="md:w-2/5">
                 {excerpt && (
-                  <p className="text-black-200 md:text-xl !leading-[1.6]">
+                  <p className="text-black-200 md:text-lg md:!leading-[1.6]">
                     {excerpt}
                   </p>
                 )}
@@ -46,7 +46,7 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
         {/* Image Container */}
         {imageSrc && (
           <div
-            className="w-full h-[calc(100svh-80px)] bg-cover bg-no-repeat bg-center"
+            className="w-full h-[40svh] sm:h-[50svh] md:h-[calc(100svh-80px)] bg-cover bg-no-repeat bg-center"
             style={{ backgroundImage: `url('${imageSrc}')` }}
           />
         )}

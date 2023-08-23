@@ -115,9 +115,12 @@ const ProjectMenu: React.FC = () => {
                   <div
                     className={`group flex flex-col gap-4 w-full h-full ${transitionClasses}`}
                   >
-                    <div className="w-full aspect-square bg-black-200 rounded-xl overflow-hidden">
-                      <Image src="" alt="" />
-                    </div>
+                    <div
+                      className="w-full aspect-square bg-black-200 rounded-xl overflow-hidden bg-center bg-cover bg-no-repeat"
+                      style={{
+                        backgroundImage: `url('${project.featuredImage}')`,
+                      }}
+                    />
 
                     {project.name && (
                       <div

@@ -6,11 +6,11 @@ import Link from "next/link";
 import Section from "@/components/common/Section";
 import Container from "@/components/common/Container";
 import { MainNav } from "@/components/navbar/MainNav";
-import ProjectMenu from "@/components/navbar/ProjectMenu";
+import ProjectMenu from "@/components/projects/ProjectMenu";
 
 import logo from "../../public/img/logo/logo-mono.svg";
 
-const SiteHeader: React.FC = () => {
+const SiteHeader = () => {
   return (
     <Section
       elementType="header"
