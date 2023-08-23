@@ -26,14 +26,15 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({
         className={`flex gap-8 ${
           imageOrientation === "landscape"
             ? "flex-col"
-            : "lg:flex-row items-start lg:mt-32"
+            : "flex-col lg:flex-row items-start lg:mt-32"
         }`}
       >
         {imageOne && (
           <div
-            className={`${
+            className={`overflow-hidden rounded-xl 
+            ${
               imageOrientation === "landscape"
-                ? "w-full lg:w-5/6"
+                ? "w-full lg:w-11/12"
                 : "w-full lg:w-2/5 lg:-mt-32"
             }`}
           >
@@ -49,9 +50,10 @@ const ProjectImages: React.FC<ProjectImagesProps> = ({
 
         {imageTwo && (
           <div
-            className={`${
+            className={`overflow-hidden rounded-xl
+            ${
               imageOrientation === "landscape"
-                ? "w-full lg:w-5/6 ml-auto"
+                ? "w-full lg:w-11/12 ml-auto"
                 : "w-fill lg:3/5"
             }`}
           >

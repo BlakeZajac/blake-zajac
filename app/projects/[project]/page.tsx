@@ -22,13 +22,45 @@ export default async function Project({ params }: Props) {
         excerpt={project.excerpt}
       />
 
-      <ProjectContent projectContent={project.content} stack={project.stack} />
+      {project.content && (
+        <ProjectContent
+          customHeading
+          content={project.content}
+          stack={project.stack}
+        />
+      )}
 
-      <ProjectImages
-        imageOrientation="portrait"
-        imageOne={project.mockupImageOne}
-        imageTwo={project.mockupImageTwo}
-      />
+      {project.mockupImageOne && project.mockupImageTwo && (
+        <ProjectImages
+          imageOrientation="portrait"
+          imageOne={project.mockupImageOne}
+          imageTwo={project.mockupImageTwo}
+        />
+      )}
+
+      {project.headingWithTextOne && (
+        <ProjectContent content={project.headingWithTextOne} />
+      )}
+
+      {project.mockupImageThree || project.mockupImageFour ? (
+        <ProjectImages
+          imageOrientation="landscape"
+          imageOne={project.mockupImageThree}
+          imageTwo={project.mockupImageFour}
+        />
+      ) : null}
+
+      {project.headingWithTextTwo && (
+        <ProjectContent content={project.headingWithTextTwo} />
+      )}
+
+      {project.mockupImageFive || project.mockupImageSix ? (
+        <ProjectImages
+          imageOrientation="landscape"
+          imageOne={project.mockupImageFive}
+          imageTwo={project.mockupImageSix}
+        />
+      ) : null}
     </>
   );
 }

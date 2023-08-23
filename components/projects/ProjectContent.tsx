@@ -4,13 +4,15 @@ import { PortableText } from "@portabletext/react";
 import { PortableTextBlock } from "sanity";
 
 interface ProjectContentProps {
-  projectContent: PortableTextBlock[];
+  content: PortableTextBlock[];
   stack?: string[];
+  customHeading?: boolean;
 }
 
 const ProjectContent: React.FC<ProjectContentProps> = ({
-  projectContent,
+  content,
   stack = [],
+  customHeading,
 }) => {
   return (
     <Section className="project-content">
@@ -19,7 +21,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({
         className="flex flex-col md:flex-row gap-20 md:gap-8"
       >
         <div className="flex flex-col gap-6 md:w-2/5 text-black-600">
-          <p className="text-uppercase text-black">Stack</p>
+          {customHeading && <p className="text-uppercase text-black">Stack</p>}
 
           <ul className="flex flex-col gap-1">
             {stack.map((stackItem, index) => (
@@ -29,8 +31,10 @@ const ProjectContent: React.FC<ProjectContentProps> = ({
         </div>
 
         <div className="flex flex-col md:w-3/5 text-black-600 md:text-lg md:!leading[1.5] max-w-[700px]">
-          <p className="text-uppercase text-black !pb-6">Information</p>
-          <PortableText value={projectContent} />
+          {customHeading && (
+            <p className="text-uppercase text-black !pb-6">Information</p>
+          )}
+          <PortableText value={content} />
         </div>
       </Container>
     </Section>
