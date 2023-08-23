@@ -2,17 +2,22 @@
 
 import Section from "@/components/common/Section";
 import Container from "@/components/common/Container";
+import { Button } from "../ui/button";
 
 interface ProjectHeroProps {
   imageSrc: string;
   title: string;
   excerpt?: string;
+  repositoryLink?: string;
+  demoLink?: string;
 }
 
 const ProjectHero: React.FC<ProjectHeroProps> = ({
   imageSrc,
   title,
   excerpt,
+  repositoryLink,
+  demoLink,
 }) => {
   return (
     <>
@@ -23,17 +28,24 @@ const ProjectHero: React.FC<ProjectHeroProps> = ({
             {/* Title */}
             <h1 className="heading-2xl">{title}</h1>
 
-            <div className="md:flex">
-              {/* Stack */}
-              <div className="md:w-3/5"></div>
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-2/5"></div>
 
               {/* Excerpt */}
-              <div className="md:w-2/5">
+              <div className="md:w-3/5 max-w-[700px]">
                 {excerpt && (
-                  <p className="text-black-200 md:text-lg md:!leading-[1.6]">
+                  <p className="text-black-200 md:text-lg md:!leading-[1.5]">
                     {excerpt}
                   </p>
                 )}
+
+                {repositoryLink ||
+                  (demoLink && (
+                    <div className="flex gap-4">
+                      <Button />
+                      <Button />
+                    </div>
+                  ))}
               </div>
 
               <div></div>

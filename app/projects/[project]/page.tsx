@@ -1,8 +1,5 @@
 import { getProject } from "@/sanity/sanity-utils";
 
-import Container from "@/components/common/Container";
-import Hero from "@/components/common/Hero";
-import Section from "@/components/common/Section";
 import ProjectHero from "@/components/projects/ProjectHero";
 import ProjectContent from "@/components/projects/ProjectContent";
 
