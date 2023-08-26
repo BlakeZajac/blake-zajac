@@ -1,23 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/project";
-
-import { MoreHorizontal, X } from "lucide-react";
 import Container from "@/components/common/Container";
+import { MoreHorizontal, X } from "lucide-react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel } from "swiper/modules";
-
 import "swiper/css";
-import "swiper/css/navigation";
-
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { useRouter } from "next/navigation";
 
 const ProjectMenu: React.FC = () => {
   const router = useRouter();
@@ -96,12 +89,12 @@ const ProjectMenu: React.FC = () => {
                   slidesPerView: 1,
                 },
               }}
-              className="pr-20"
+              className="!pr-20"
             >
               {projects.map((project, index) => (
                 <SwiperSlide
                   key={project._id}
-                  className="flex gap-2 cursor-pointer"
+                  className="!flex gap-2 cursor-pointer"
                   onClick={() => {
                     router.push(`/projects/${project.slug}`); // Load single project
                     setMenuVisible(false); // Then close the projects menu
