@@ -4,6 +4,7 @@ import Tabs from "@/components/common/Tabs";
 import CustomMarquee from "@/components/common/Marquee";
 import FeaturedProjects from "@/components/common/FeaturedProjects";
 import FullwidthImage from "@/components/common/FullwidthImage";
+import Clients from "@/components/common/Clients";
 
 export default async function Home() {
   return (
@@ -28,6 +29,8 @@ export default async function Home() {
         imageSrc="/img/photo/bar_beach/bar-beach-01.jpg"
         imageAlt="Bar Beach"
       />
+
+      <Clients title="Clients I've worked with" />
 
       <Tabs />
     </>
