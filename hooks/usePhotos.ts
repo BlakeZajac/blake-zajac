@@ -10,9 +10,9 @@ export function usePhotos() {
       const photosData = await getPhotos();
       console.log("Fetched photos data:", photosData);
       setPhotos(photosData);
-
-      fetchPhotos();
     }
+
+    fetchPhotos();
   }, []);
 
   return photos;
