@@ -23,9 +23,8 @@ const FullwidthImage: React.FC<FullwidthImageProps> = ({
       <Image
         src={imageSrc}
         alt={imageAlt}
-        objectFit="cover"
         fill
-        className={`${relative ? "!relative" : ""}`}
+        className={`object-cover ${relative ? "!relative" : ""}`}
         loading="lazy"
       />
     </div>
